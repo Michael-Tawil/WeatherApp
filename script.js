@@ -8,7 +8,7 @@ const details = document.querySelector(".deets")
 
 async function GetWeatherData (cityinpv){
     try{
-        let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=9d5ca831ac58467db48104040230808&q=${cityinpv}&aqi=no`,{mode:"cors"})
+        let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=9d5ca831ac58467db48104040230808&q=${cityinpv}&aqi=no`,{mode:"cors"})
         let weatherdata = await response.json()
         console.log(weatherdata)
         console.log(weatherdata.current.temp_c)
