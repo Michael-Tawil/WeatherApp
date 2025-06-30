@@ -84,4 +84,4 @@ The app automatically changes its background based on current weather conditions
 
 ## Live Deployment
 
-<>
+https://rctweatherapp.netlify.app/
