@@ -82,6 +82,6 @@ The app automatically changes its background based on current weather conditions
 
 **Michael Tawil**
 
-##Live Deployment
+## Live Deployment
 
 <>
