@@ -11,13 +11,14 @@ const useWeatherStore = create((set, get) => ({
     error: null,
     searchHistory: [],
     unit: 'celsius',
+    darkMode: false,
 
     getCurrentWeather: async (city) => {
         set({ loading: true, error: null })
 
         try {
             const resposne = await axios.get(
-                `${BASE_URL}/current.jsoon?key=-${API_KEY}&q=${city}&aqi=no`
+                `${BASE_URL}/current.json?key=${API_KEY}&q=${city}&aqi=no`
             )
             set({
                 currentWeather: resposne.data,
@@ -62,10 +63,10 @@ const useWeatherStore = create((set, get) => ({
         }
     },
 
-    toggleUnit: ()=>{
-        const {unit} = get();
+    toggleUnit: () => {
+        const { unit } = get();
         set({
-            unit:unit === 'celsius' ? 'fahrenheit' : 'celsius'
+            unit: unit === 'celsius' ? 'fahrenheit' : 'celsius'
         })
     },
 
@@ -79,6 +80,12 @@ const useWeatherStore = create((set, get) => ({
             forecast: null,
             error: null
         });
+    },
+
+    toggleDarkMode: () => {
+        const { darkMode } = get()
+        set({ darkMode: !darkMode })
     }
 
 }))
+export default useWeatherStore
