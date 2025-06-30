@@ -35,7 +35,7 @@ const WeatherCard = () => {
                     onClick={toggleUnit}
                     className={`text-xs px-3 py-1 ${darkMode
                             ? 'bg-gray-700 hover:bg-gray-600 text-white border-gray-600'
-                            : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-300'
+                            : 'bg-blue-500 hover:bg-blue-600 text-white-700 border-gray-300'
                         }`}
                 >
                     °C / °F
